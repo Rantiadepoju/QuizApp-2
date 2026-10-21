@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp -RantiDev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="web icon.jpg" type="image/X-icon">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="quiz-container">
+
+        <!--Home Screen-->
+        <div class="home-screen">
+            <img src="I.Q.jpg" alt="test-image" style="font-size: medium;"/>
+        </div>
+
+        <!-- Start Screen -->
+        <section id="start-screen" class="screen">
+            <h1>QuizApp</h1>
+            <p>Welcome to QuizApp!</p>
+            <p>Test your knowledge by answering five questions.</p>
+            <form id="start-form">
+                <label for="player-name">Enter your name to begin:</label>
+                <input id="player-name" name="playerName" type="text"
+                    autocomplete="name" required>
+                <p id="name-error" class="error-message" aria-live="polite"></p>
+                <button id="start-btn" type="submit">Start Quiz</button>
+            </form>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+            <p id="progress">Question 1 of 5</p>
+            <h2 id="question"></h2>
+
+            <div id="choices" class="choices"></div>
+
+            <p id="feedback" aria-live="polite"></p>
+
+            <button id="next-btn" disabled>Next</button>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results-screen" class="screen hidden">
+            <h1>Quiz Completed!</h1>
+            <p id="player-result"></p>
+            <h2 id="final-score"></h2>
+            <p id="result-message"></p>
+            <button id="restart-btn" type="button">Restart</button>
+        </section>
+
+    </main>
+    
+</body>
+</html>
+
+

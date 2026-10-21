@@ -1,0 +1,159 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #222;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.home-screen {
+    height: auto;
+    font-size: 45px;
+}
+
+.screen {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #243b55;
+    margin-top: 0;
+}
+
+#progress {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#question {
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#start-btn,
+#next-btn,
+#restart-btn {
+    margin-top: 20px;
+    background-color: #243b55;
+    color: white;
+}
+
+#start-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+    text-align: left;
+}
+
+#player-name {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9aa8b7;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.error-message {
+    min-height: 20px;
+    margin: 0;
+    color: #b02a37;
+}
+
+#start-btn:hover,
+#next-btn:not(:disabled):hover,
+#restart-btn:hover {
+    background-color: #3b638c;
+}
+
+.choices button {
+    text-align: left;
+    background-color: #f0f3f7;
+    border: 2px solid transparent;
+}
+
+.choices button:hover:not(:disabled) {
+    background-color: #e0e8f2;
+}
+
+.choices button.selected {
+    background-color: #d5e6ff;
+    border-color: #243b55;
+}
+
+.choices button.correct {
+    background-color: #c8f7d2;
+    border-color: #198754;
+}
+
+.choices button.incorrect {
+    background-color: #ffd6d6;
+    border-color: #dc3545;
+}
+
+#next-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#feedback {
+    min-height: 20px;
+    font-weight: bold;
+}
+
+#final-score {
+    color: #198754;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+}

@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #141e30, #243b55);
@@ -17,8 +17,9 @@ body {
 
 .quiz-container {
     width: 100%;
-    max-width: 600px;
-    padding: 35px;
+    max-width: 300px;
+    margin-block: auto;
+    padding: 10px;
     background: white;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -27,6 +28,13 @@ body {
 .home-screen {
     height: auto;
     font-size: 45px;
+}
+
+.home-screen img {
+    display: block;
+    width: 100%;
+    max-height: 10vh;
+    object-fit: contain;
 }
 
 .screen {
@@ -40,6 +48,11 @@ body {
 h1 {
     color: #243b55;
     margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#start-screen p {
+    margin: 8px 0;
 }
 
 #progress {
@@ -61,7 +74,7 @@ h1 {
 
 button {
     width: 100%;
-    padding: 13px 16px;
+    padding: 10px 12px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -72,7 +85,7 @@ button {
 #start-btn,
 #next-btn,
 #restart-btn {
-    margin-top: 20px;
+    margin-top: 12px;
     background-color: #243b55;
     color: white;
 }
@@ -81,7 +94,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 24px;
+    margin-top: 10px;
     text-align: left;
 }
 
@@ -146,7 +159,7 @@ button {
 
 @media (max-width: 480px) {
     .quiz-container {
-        padding: 22px;
+        padding: 10px;
     }
 
     h1 {
